@@ -22,6 +22,11 @@
 		display: block;
 	}
 
+	.div_photo {
+		vertical-align: top;
+	}
+
+
 	body {
 		line-height: 1;
 	}

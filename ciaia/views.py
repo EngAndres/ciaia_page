@@ -20,7 +20,7 @@ def conferencistas(request):
 def entidades(request):
 	return render(request, 'ciaia/entidades.html')
 
-def preregistro(request):
+def registro(request):
 	return render(request, 'ciaia/preregistro.html')
 
 def venue(request):

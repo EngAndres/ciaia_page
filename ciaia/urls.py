@@ -8,6 +8,6 @@ urlpatterns = [
     url(r'^comite/$', views.comite, name='comite'),
     url(r'^conferencistas/$', views.conferencistas, name='conferencistas'),
     url(r'^entidades/$', views.entidades, name='entidades'),
-    url(r'^preregistro/$', views.preregistro, name='preregistro'),	
+    url(r'^registro/$', views.registro, name='registro'),	
     url(r'^venue/$', views.venue, name='venue'),	
 ]
