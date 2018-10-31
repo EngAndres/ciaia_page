@@ -24,6 +24,7 @@
 
 	.div_photo {
 		vertical-align: top;
+		display: flex;
 	}
 
 
