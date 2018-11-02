@@ -27,6 +27,13 @@
 		<link rel="stylesheet" href="/static/ciaia/assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+		<style>
+       			#map {
+        			height: 350px;
+        			width: 50%;
+       			}
+    		</style>
 	</head>
 	<body>
 		<!-- Wrapper -->
@@ -69,10 +76,47 @@
 			<div id="main">
 			<div class="inner">
 				<header>
+				<div class="div_photo">
 					<span class="image">
 						<img src="/static/ciaia/images/auditorio.png" alt="C&T" />
 						Lugar: Auditorio Principal - Edificio de Ciencia y Tecnolog&iacute;a
 					</span>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	     
+					<div id="map"></div>
+					    <script>
+					      function initMap() {
+						var center = {lat: 4.63803, lng: -74.0847748};
+						var locations = [center]
+						var map = new google.maps.Map(document.getElementById('map'), {
+						  zoom: 15,
+						  center: center
+						});
+						var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	
+						var marker = new google.maps.Marker({position: center, map: map});
+
+
+						var markers = locations.map(function(location, i) {
+						  return new google.maps.Marker({
+						    position: location,
+						    label: labels[i % labels.length],
+						    
+						  });
+						});
+
+						// Add a marker clusterer to manage the markers.
+						var markerCluster = new MarkerClusterer(map, markers,
+						    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+					      }
+					      
+					    </script>
+					    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+					    </script>
+
+					    <script async defer
+					    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwr4Yf54qgwnjlOcdf6k7ANGkhOMZW4dg&callback=initMap">
+					    </script>
+				</div>
 				</header>
 			</div>
 			</div>

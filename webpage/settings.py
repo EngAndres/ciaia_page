@@ -26,6 +26,7 @@ SECRET_KEY = '4jx_zima%-m2u4ar-1$(@*5&p4cl5h+pm)-m+(*$ag&e3ia)!^'
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','localhost','ciaia.pythonanywhere.com']
+GEOPOSITION_GOOGLE_MAPS_API_KEY = 'AIzaSyDwr4Yf54qgwnjlOcdf6k7ANGkhOMZW4dg'
 
 
 # Application definition
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ciaia',
+    'django_google_maps',
 ]
 
 MIDDLEWARE = [
